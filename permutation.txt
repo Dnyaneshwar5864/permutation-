@@ -1,0 +1,28 @@
+package Setters.cp;
+import java.util.Scanner;
+public class Permutation {
+
+	public static void main(String[] args) {
+		// program of
+		int tobjects,sobjects,permutation,f1,f2;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter value of n and r");
+		tobjects=sc.nextInt();
+		sobjects=sc.nextInt();
+		f1=tobjects;
+		for(int i=tobjects-1;i>=1;i--)
+		{
+			f1=f1*i;
+		}
+		int number;
+		number =tobjects-sobjects;
+		f2=number;
+		for(int i=number-1;i>=1;i--)
+		{
+			f2=f2*i;
+			
+		}
+		permutation=f1/f2;
+		System.out.println("the permutation of p(n,r)"+permutation);
+	}	
+}
